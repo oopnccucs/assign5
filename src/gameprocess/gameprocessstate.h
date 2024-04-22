@@ -1,0 +1,12 @@
+#ifndef GAMEPROCESSSTATE_H
+#define GAMEPROCESSSTATE_H
+
+enum GameProcessState {
+    GAME_PROCESS_MOVEMENT,
+    // GAME_PROCESS_BATTLE,
+    // GAME_PROCESS_GAMEOVER,
+    // GAME_PROCESS_CLEAR,
+    // GAME_PROCESS_EXIT
+};
+
+#endif

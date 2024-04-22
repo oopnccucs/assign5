@@ -1,0 +1,10 @@
+#ifndef PLAYERSTATE_H
+#define PLAYERSTATE_H
+
+enum PlayerMoveState {
+    PLAYERMOVESTATE_MOVE,
+    // PLAYERMOVESTATE_LEFTROOM,
+    // PLAYERMOVESTATE_RIGHTROOM,
+};
+
+#endif
