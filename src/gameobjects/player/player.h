@@ -5,6 +5,8 @@
 #include "../gameobject.h"
 #include "playerstate.h"
 
+using namespace PlayerState;
+
 // Rewrite this class to inherit from the GameObject class
 // at /src/gameobjects/gameobject.h
 
@@ -33,7 +35,7 @@ public:
 
     std::string getName();
 
-    PlayerMoveState move();
+    MoveState move();
     
     void render();
 };

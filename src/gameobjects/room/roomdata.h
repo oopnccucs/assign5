@@ -6,6 +6,8 @@
 #include "roomstate.h"
 #include "../../controller/enviroment.h"
 
+using namespace RoomState;
+
 // Room object id is defined in roomstate.h
 
 const RoomData ROOM_DATA[] = {

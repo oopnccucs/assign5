@@ -9,6 +9,9 @@
 #include "../gameobjects/player/player.h"
 #include "../gameprocess/gameprocessstate.h"
 
+using namespace GameState;
+using namespace GameProcess;
+
 // The controller class is for handling the main game loop and logic.
 
 class Controller {
@@ -25,7 +28,7 @@ public:
     ~Controller();
 
     // main game loop function
-    GameState run(InputState action);
+    RunningState run(InputState action);
 
     void render();
 };

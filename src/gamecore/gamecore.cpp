@@ -10,7 +10,7 @@ GameCore::~GameCore() {
     
 }
 
-GameState GameCore::lifeCycle(InputState action) {
+RunningState GameCore::lifeCycle(InputState action) {
     return gameController.run(action);
 }
 
@@ -18,26 +18,29 @@ InputState GameCore::ConvertInputToAction(int input) {
     switch (input) {
         case 'w':
         case 'W':
-            return GAME_ACTION_UP;
+            return ACTION_UP;
         case 's':
         case 'S':
-            return GAME_ACTION_DOWN;
+            return ACTION_DOWN;
         case 'a':
         case 'A':
-            return GAME_ACTION_LEFT;
+            return ACTION_LEFT;
         case 'd':
         case 'D':
-            return GAME_ACTION_RIGHT;
+            return ACTION_RIGHT;
 
         case 32: // space
-            return GAME_ACTION_CONFIRN;
+            return ACTION_CONFIRN;
         case 10: // enter
-            return GAME_ACTION_CONFIRN;
+            return ACTION_CONFIRN;
+
+        case 27: // esc
+            return ACTION_PAUSE;
 
         case -1:
-            return GAME_ACTION_INIT;
+            return ACTION_INIT;
 
         default:
-            return GAME_ACTION_NONE;
+            return ACTION_NONE;
     }
 }

@@ -8,6 +8,8 @@
 #include "../../functions/position/position.h"
 #include "roomstate.h"
 
+using namespace RoomState;
+
 class Room {
     private:
         int roomID;

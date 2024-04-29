@@ -3,6 +3,8 @@
 
 #include "../controller/controller.h"
 
+using namespace GameState;
+
 // The gamecore class is for handling the effects of external events on the game.
 // You probably don't need to modify this class and .cpp file.
 
@@ -14,7 +16,7 @@ public:
     GameCore();
     ~GameCore();
 
-    GameState lifeCycle(InputState action);
+    RunningState lifeCycle(InputState action);
     
     static InputState ConvertInputToAction(int input);
 };

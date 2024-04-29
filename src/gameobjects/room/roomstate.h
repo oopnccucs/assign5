@@ -3,22 +3,24 @@
 
 #include <vector>
 
-enum RoomObject {
-    ROOM_OBJECT_NONE = 0,
-    ROOM_OBJECT_DOOR = 1,
-    ROOM_OBJECT_WALL = 2,
-    ROOM_OBJECT_GRASS = 3,
-    ROOM_OBJECT_ROCK = 4,
-    ROOM_OBJECT_WATER = 5,
-};
+namespace RoomState
+{
+    enum RoomObject {
+        OBJECT_NONE = 0,
+        OBJECT_DOOR = 1,
+        OBJECT_WALL = 2,
+        OBJECT_GRASS = 3,
+        OBJECT_ROCK = 4,
+        OBJECT_WATER = 5,
+    };
 
-struct RoomData {
-    int id;
-    std::string name;
-    std::string description;
-    Position playerInitialPosition;
-    int defaultRoomObjectMap[GAME_WINDOW_SIZE_Y][GAME_WINDOW_SIZE_X];
-};
-
+    struct RoomData {
+        int id;
+        std::string name;
+        std::string description;
+        Position playerInitialPosition;
+        int defaultRoomObjectMap[GAME_WINDOW_SIZE_Y][GAME_WINDOW_SIZE_X];
+    };
+} // namespace RoomState
 
 #endif

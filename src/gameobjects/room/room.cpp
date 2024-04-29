@@ -28,22 +28,22 @@ Room::Room(RoomData data) {
 // render
 void Room::render(Position position) {
     switch(this->defaultRoomObjectMap[position.getY()][position.getX()]) {
-        case ROOM_OBJECT_NONE:
+        case OBJECT_NONE:
             AnsiPrint("  ", black, black);
             break;
-        case ROOM_OBJECT_DOOR:
+        case OBJECT_DOOR:
             AnsiPrint("DR", yellow, black);
             break;
-        case ROOM_OBJECT_WALL:
+        case OBJECT_WALL:
             AnsiPrint("██", white, black);
             break;
-        case ROOM_OBJECT_GRASS:
+        case OBJECT_GRASS:
             AnsiPrint("WW", green, black);
             break;
-        case ROOM_OBJECT_ROCK:
+        case OBJECT_ROCK:
             AnsiPrint("▲▲", yellow, black);
             break;
-        case ROOM_OBJECT_WATER:
+        case OBJECT_WATER:
             if(rand() % 2 == 0) {
                 AnsiPrint("~~", cyan, blue);
             } else {

@@ -1,20 +1,24 @@
 #ifndef GAMESTSATE_H
 #define GAMESTSATE_H
 
-enum GameState {
-    GAME_STATE_PLAY,
-    GAME_STATE_EXIT
-};
+namespace GameState {
+    enum RunningState {
+        PLAY,
+        EXIT
+    };
 
-enum InputState {
-    GAME_ACTION_NONE,
-    GAME_ACTION_UP,
-    GAME_ACTION_DOWN,
-    GAME_ACTION_LEFT,
-    GAME_ACTION_RIGHT,
-    GAME_ACTION_CONFIRN,
-    GAME_ACTION_EXIT,
-    GAME_ACTION_INIT
-};
+    enum InputState {
+        ACTION_NONE,
+        ACTION_UP,
+        ACTION_DOWN,
+        ACTION_LEFT,
+        ACTION_RIGHT,
+        ACTION_CONFIRN,
+        ACTION_PAUSE,
+        ACTION_EXIT,
+        ACTION_INIT
+    };
+} // namespace Gamestate
+
 
 #endif

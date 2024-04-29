@@ -1,10 +1,14 @@
 #ifndef PLAYERSTATE_H
 #define PLAYERSTATE_H
 
-enum PlayerMoveState {
-    PLAYERMOVESTATE_MOVE,
-    // PLAYERMOVESTATE_LEFTROOM,
-    // PLAYERMOVESTATE_RIGHTROOM,
-};
+namespace PlayerState
+{
+    enum MoveState {
+        MOVE,
+        // LEFTROOM,
+        // RIGHTROOM,
+    };
+} // namespace PlayerState
+
 
 #endif
