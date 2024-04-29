@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
 
     GameCore game;
 
-    GameState state = GAME_STATE_PLAY;
+    GameState::RunningState state = GameState::PLAY;
 
     // init state
     int input = -1;
@@ -67,11 +67,11 @@ int main(int argc, char *argv[]) {
 
     clock_t start, end;
 
-    while (state != GAME_STATE_EXIT && !exit_loop) {
+    while (state != GameState::EXIT && !exit_loop) {
 
         start = clock();
 
-        InputState action = GameCore::ConvertInputToAction(input);
+        GameState::InputState action = GameCore::ConvertInputToAction(input);
 
         // main game loop entry point
         state = game.lifeCycle(action);
