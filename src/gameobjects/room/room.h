@@ -24,6 +24,7 @@ class Room {
         Room(RoomData roomData);
         ~Room();
 
+        // check if the position is walkable
         bool walkable(Position position);
 
         void render(Position position);
